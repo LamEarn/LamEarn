@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WorkLink – Global Platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ================= ROOT ================= */
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --accent:#2563eb;
+  --accent-soft:#dbeafe;
+}
+
+/* ================= BASE ================= */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system;
+  background:var(--bg);
+  color:var(--text);
+}
+.hidden{display:none}
+
+/* ================= WATERMARK (LOCKED DESIGN ONLY) ================= */
+.watermark{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:64px;
+  font-weight:900;
+  letter-spacing:6px;
+  color:rgba(0,0,0,0.05);
+  transform:rotate(-20deg);
+  z-index:999;
+}
+.watermark.hidden{display:none}
+
+/* ================= TOPBAR ================= */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
+  background:white;
+  border-bottom:1px solid var(--border);
+}
+.menu-btn{font-size:22px;cursor:pointer}
+.logo{font-weight:800}
+
+/* ================= SIDE MENU ================= */
+.side-menu{
+  position:fixed;
+  top:0;left:-100%;
+  width:80%;height:100%;
+  background:white;
+  padding:24px;
+  overflow:auto;
+  transition:.3s;
+  z-index:100;
+}
+.side-menu.active{left:0}
+.side-menu h4{
+  margin:24px 0 10px;
+  font-size:12px;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+.side-menu .item{
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  cursor:pointer;
+}
+
+/* ================= SEARCH ================= */
+.search{
+  width:calc(100% - 32px);
+  margin:16px;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:white;
+}
+
+/* ================= GRID ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:0 16px 120px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:14px;
+}
+.thumb{
+  height:110px;
+  border-radius:14px;
+  background:#e5e7eb;
+  margin-bottom:10px;
+}
+.card h3{margin:0;font-size:15px}
+.card p{margin:4px 0 10px;font-size:13px;color:var(--muted)}
+.btn{
+  width:100%;
+  padding:10px;
+  border-radius:12px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+}
+
+/* ================= EMPTY ================= */
+.empty{
+  padding:80px 20px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* ================= UPLOAD ================= */
+.upload-btn{
+  position:fixed;
+  right:18px;
+  bottom:90px;
+  width:56px;height:56px;
+  border-radius:50%;
+  background:var(--accent);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* ================= GIFT MODAL ================= */
+.gift-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:200;
+}
+.gift-box{
+  background:white;
+  padding:20px;
+  border-radius:16px;
+  width:85%;
+}
+.gift-box h3{margin-top:0}
+.gift-box button{
+  margin-top:10px;
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:var(--accent);
+  color:white;
+}
+
+/* ================= BOTTOM NAV ================= */
+.bottom-nav{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:white;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0 12px;
+}
+.bottom-nav div{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+}
+.bottom-nav .active{color:var(--accent)}
+.bottom-nav .icon{font-size:20px;display:block}
+</style>
+</head>
+
+<body>
+
+<!-- WATERMARK FOR UNPAID DESIGNS -->
+<div class="watermark" id="watermark">WORKLINK</div>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+  <h4>Main</h4>
+  <div class="item" onclick="show('home')">Home</div>
+  <div class="item" onclick="show('products')">Products</div>
+  <div class="item" onclick="show('books')">Books</div>
+  <div class="item" onclick="show('learning')">Learning</div>
+  <div class="item" onclick="show('jobs')">Jobs</div>
+
+  <h4>Social</h4>
+  <div class="item" onclick="show('inbox')">Inbox</div>
+
+  <h4>Account</h4>
+  <div class="item">Profile</div>
+  <div class="item">Wallet</div>
+  <div class="item">Settings</div>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <div class="logo">WorkLink</div>
+  <div>⋮</div>
+</div>
+
+<input class="search" placeholder="Search products, books, learning...">
+
+<!-- CONTENT -->
+<div id="content">
+
+<!-- HOME -->
+<div class="grid" id="home">
+  <div class="card">
+    <div class="thumb"></div>
+    <h3>Premium Book</h3>
+    <p>$5 · Popular</p>
+    <button class="btn" onclick="openGift()">Send Gift</button>
+  </div>
+  <div class="card">
+    <div class="thumb"></div>
+    <h3>Learning Course</h3>
+    <p>$10 · New</p>
+    <button class="btn">Open</button>
+  </div>
+</div>
+
+<div class="empty hidden" id="products">No products available now</div>
+<div class="empty hidden" id="books">No books available now</div>
+<div class="empty hidden" id="learning">No learning available now</div>
+<div class="empty hidden" id="jobs">No jobs available now</div>
+<div class="empty hidden" id="inbox">No messages yet</div>
+
+</div>
+
+<!-- UPLOAD -->
+<div class="upload-btn">＋</div>
+
+<!-- GIFT MODAL -->
+<div class="gift-modal hidden" id="giftModal">
+  <div class="gift-box">
+    <h3>Send Gift</h3>
+    <p>Select amount to gift this content.</p>
+    <button onclick="sendGift()">Confirm Gift</button>
+    <button onclick="closeGift()" style="background:#e5e7eb;color:#111">Cancel</button>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+  <div class="active" onclick="show('home')"><span class="icon">⌂</span>Home</div>
+  <div onclick="show('products')"><span class="icon">🛒</span>Products</div>
+  <div onclick="show('inbox')"><span class="icon">✉️</span>Inbox</div>
+  <div><span class="icon">💼</span>Wallet</div>
+  <div><span class="icon">👤</span>Profile</div>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+function show(id){
+  document.querySelectorAll("#content > div").forEach(d=>d.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+  toggleMenu();
+}
+function openGift(){
+  document.getElementById("giftModal").classList.remove("hidden");
+}
+function closeGift(){
+  document.getElementById("giftModal").classList.add("hidden");
+}
+function sendGift(){
+  alert("Gift sent successfully");
+  closeGift();
+}
+/* unlock design after payment */
+// document.getElementById("watermark").classList.add("hidden");
+</script>
+
+</body>
+</html>
