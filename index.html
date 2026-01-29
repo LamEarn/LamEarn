@@ -403,8 +403,6 @@ body{
 <body>
     
     <!-- PAGES -->
-    <header class="app-header"></header>
-
 <main id="pages">
 
   <section id="home" class="page active">
@@ -525,7 +523,7 @@ body{
     <h3>🎁 Send Gift</h3>
 
     <input type="text" placeholder="User name">
-    <textarea placeholder="Message (optional)"></textarea>
+   <textarea placeholder="Message (optional)"></textarea>
 
     <div class="modal-actions">
       <button class="btn" onclick="sendGift()">Send</button>
@@ -554,31 +552,8 @@ body{
   <div onclick="show('profile')">
     <span class="icon">👤</span>Profile
   </div>
-</div>
-<script>
-    let currentPost = null;
-    /* OPEN GIFT – POST GUSA */
-function openGift(btn){
-  const post = btn.closest('.post-card');
-  if(!post){
-    alert("Gifts are for posts only");
-    return;
-  }
-  currentPost = post;
-  document.getElementById('giftModal').classList.remove('hidden');
-}
+  </div>
 
-function closeGift(){
-  document.getElementById('giftModal').classList.add('hidden');
-  currentPost = null;
-}
-
-function sendGift(){
-  if(!currentPost) return;
-  alert("Gift sent successfully");
-  closeGift();
-}
-</script>
 
 
 
@@ -616,7 +591,7 @@ function sendGift(){
   <a onclick="show('courses')">🎓 Courses</a>
   <a onclick="show('posts')">📝 Posts</a>
 <div class="upload-box">
-  <h3>Add New Product</h3>
+  
 
  
   <!-- WALLET -->
@@ -639,16 +614,15 @@ function sendGift(){
   <a onclick="show('profile')">👤 Profile</a>
   <a onclick="show('settings')">⚙️ Settings</a>
   <a onclick="show('support')">🆘 Support</a>
-  <a onclick="show('logout')">🚪 Logout</a>
-
-</div>
+ <section id="logout" class="page hidden">  
+  <h2>🚪Logging out...</h2>  
+</section>gleMenuv>
 <script>
 function toggleMenu(){
   const menu = document.getElementById("sideMenu");
   menu.classList.toggle("hidden");
 }
-</script>
-<script>
+
 function show(pageId){
   document.querySelectorAll('.page').forEach(p=>{
     p.classList.remove('active');
@@ -660,9 +634,7 @@ function show(pageId){
   const menu = document.getElementById('sideMenu');
   if(menu) menu.classList.add('hidden');
 }
-</script>
 
-<script>
 function openGift(btn){
   document.getElementById("giftModal").classList.remove("hidden");
 }
@@ -675,8 +647,7 @@ function sendGift(){
   alert("Gift sent successfully 🎉");
   closeGift();
 }
-</script>
-<script>
+
 function openInviteLink(){
   window.open(
     "https://lamearn.app/invite?ref=USER123",
@@ -685,4 +656,4 @@ function openInviteLink(){
 }
 </script>
 </body>
-      </html>
+    </html>
