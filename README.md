@@ -1,6 +1,6 @@
-# 🚀 WorkLink
+# 🚀 LamEarn
 
-**WorkLink** is a monetization-first digital platform designed to help users **do business, learn, and earn money**, while ensuring long-term sustainability for the system itself.
+**LamEarn** is a monetization-first digital platform designed to help users **do business, learn, and earn money**, while ensuring long-term sustainability for the system itself.
 
 The platform blends **earning opportunities, digital products, gifts, and a smart retention model** that benefits both users and the ecosystem.
 
