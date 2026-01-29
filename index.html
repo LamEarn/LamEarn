@@ -2,36 +2,211 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <meta name="google-site-verification" content="xR8RBP3O_a3peFCX3A93EqPCSTu726nk6-wo8PV_sEA" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Primary SEO -->
-<title>LamEarn – Earn Money Online, Digital Business & Smart Rewards</title>
-<meta name="description" content="LamEarn is a modern digital platform where users earn money online through tasks, digital products, gifts, and smart monetization. Built for business, learning, and sustainable earnings." />
 
-<!-- Keywords -->
-<meta name="keywords" content="earn money online, digital business, online earning platform, gifts system, wallet earnings, passive income, LamEarn" />
+<title>LamEarn – work and make money online</title>
+<meta name="description" content="LamEarn is a digital platform where users earn money through posts, digital products, gifts, and smart rewards.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lamberttuyishime00-max.github.io/LamEarn/">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<header class="app-header">
 
-<!-- Author -->
-<meta name="author" content="LamEarn Platform" />
+</header>
 
-<!-- Robots -->
-<meta name="robots" content="index, follow" />
-
-<!-- Canonical -->
-<link rel="canonical" href="https://lamberttuyishime00-max.github.io/LamEarn/" />
-
-<!-- Open Graph (Facebook, WhatsApp) -->
-<meta property="og:title" content="LamEarn – Business & Earn Money Platform" />
-<meta property="og:description" content="Earn money online through tasks, digital products, gifts, and smart rewards. LamEarn is built for long-term business growth." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lamberttuyishime00-max.github.io/LamEarn/" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="LamEarn – Earn Money Online" />
-<meta name="twitter:description" content="A smart earning platform for digital business, tasks, gifts, and wallet-based rewards." />
 <style>
-/* ================= ROOT ================= */
+    
+    
+    .upload-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#f9fafb;
+  border:1px dashed #d1d5db;
+  font-size:14px;
+  font-weight:600;
+  color:#111827;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.upload-btn:hover{
+  background:#eef2ff;
+  border-color:#6366f1;
+  color:#4f46e5;
+}
+
+.upload-btn:active{
+  transform:scale(.97);
+}
+    
+   .post-card img,
+.post-card .thumb{
+  height:120px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#e5e7eb,#f1f5f9);
+}
+  
+}
+   .brand-logo{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-1px;
+}
+    
+   body{
+  font-family:'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+
+    .post-card h3{
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:-0.3px;
+}
+.post-card .meta{
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+.send-btn{
+  background:linear-gradient(180deg,#2563eb,#1e40af);
+  border:none;
+  border-radius:14px;
+  padding:12px;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:-0.2px;
+}
+    .top-bar{
+  position: relative;
+  height:46px;
+  display:flex;
+  align-items:center;
+  background:#fff;
+  border-bottom:3px solid #eee;
+}
+
+/* Menu icon ibumoso */
+.menu-btn{
+  font-size:25px;
+  padding:0 5px;
+  cursor:pointer;
+}
+
+/* LamEarn hagati nyayo */
+.brand-logo{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+  l
+    .menu-title{
+  margin:0 0 12px;
+  padding:10px 16px;
+  font-size:16px;
+  font-weight:600;
+  color:#111827;
+  border-bottom:1px solid #e5e7eb;
+}
+    /* SIDE MENU */
+.side-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;          /* menu ifata screen yose */
+  background: #ffffff;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+  padding-top: 60px;
+  overflow-y: auto;      /* ⭐ scroll if items ari nyinshi */
+  z-index: 3000;
+}
+
+/* Title */
+.menu-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Section title */
+.menu-section{
+  font-size: 15px;
+  color: 888;
+  margin: 15px 15px 5px;
+  text-transform: uppercase;
+}
+
+/* Menu links */
+.side-menu a{
+  display: block;
+  padding: 12px 18px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Hover effect */
+.side-menu a:hover{
+  background: #f2f2f2;
+}
+
+/* Hamburger button */
+.menu-btn{
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 4000;
+}
+
+/* Hide menu */
+.hidden{
+  display: none;
+}
+/* MODAL BACKDROP */
+#giftModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* HIDE STATE */
+#giftModal.hidden {
+  display: none;
+}
+
+/* MODAL BOX */
+#giftModal .modal-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+}
+    .bottom-nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.bottom-nav .icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
 :root{
   --bg:#f4f6f8;
   --card:#ffffff;
@@ -39,290 +214,474 @@
   --muted:#6b7280;
   --border:#e5e7eb;
   --accent:#2563eb;
-  --accent-soft:#dbeafe;
 }
 
-/* ================= BASE ================= */
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:system-ui,-apple-system;
   background:var(--bg);
   color:var(--text);
 }
-.hidden{display:none}
 
-/* ================= WATERMARK (LOCKED DESIGN ONLY) ================= */
-.watermark{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:64px;
-  font-weight:900;
-  letter-spacing:6px;
-  color:rgba(0,0,0,0.05);
-  transform:rotate(-20deg);
-  z-index:999;
-}
-.watermark.hidden{display:none}
-
-/* ================= TOPBAR ================= */
+/* TOPBAR */
 .topbar{
   position:sticky;
   top:0;
-  z-index:50;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  background:#fff;
   padding:14px 16px;
-  background:white;
+  font-weight:800;
   border-bottom:1px solid var(--border);
-}
-.menu-btn{font-size:22px;cursor:pointer}
-.logo{font-weight:800}
-
-/* ================= SIDE MENU ================= */
-.side-menu{
-  position:fixed;
-  top:0;left:-100%;
-  width:80%;height:100%;
-  background:white;
-  padding:24px;
-  overflow:auto;
-  transition:.3s;
-  z-index:100;
-}
-.side-menu.active{left:0}
-.side-menu h4{
-  margin:24px 0 10px;
-  font-size:12px;
-  color:var(--muted);
-  text-transform:uppercase;
-}
-.side-menu .item{
-  padding:12px 0;
-  border-bottom:1px solid var(--border);
-  cursor:pointer;
+  text-align:center;
 }
 
-/* ================= SEARCH ================= */
+/* SEARCH */
 .search{
   width:calc(100% - 32px);
   margin:16px;
-  padding:14px 16px;
+  padding:12px 14px;
   border-radius:14px;
   border:1px solid var(--border);
-  background:white;
 }
 
-/* ================= GRID ================= */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:16px;
   padding:0 16px 120px;
 }
+
+/* POST CARD */
 .card{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:18px;
   padding:14px;
 }
+
 .thumb{
   height:110px;
-  border-radius:14px;
   background:#e5e7eb;
+  border-radius:14px;
   margin-bottom:10px;
 }
-.card h3{margin:0;font-size:15px}
-.card p{margin:4px 0 10px;font-size:13px;color:var(--muted)}
-.btn{
-  width:100%;
-  padding:10px;
-  border-radius:12px;
-  border:none;
-  background:var(--accent);
-  color:white;
-  font-weight:600;
+
+.card h3{
+  margin:0;
+  font-size:15px;
 }
 
-/* ================= EMPTY ================= */
-.empty{
-  padding:80px 20px;
-  text-align:center;
+.card p{
+  margin:4px 0 10px;
+  font-size:13px;
   color:var(--muted);
 }
 
-/* ================= UPLOAD ================= */
-.upload-btn{
-  position:fixed;
-  right:18px;
-  bottom:90px;
-  width:56px;height:56px;
-  border-radius:50%;
+/* BUTTON */
+.btn{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:12px;
   background:var(--accent);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
+  color:#fff;
+  font-weight:600;
   cursor:pointer;
 }
 
-/* ================= GIFT MODAL ================= */
+/* GIFT MODAL */
+.hidden{display:none}
+
 .gift-modal{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.4);
+  background:rgba(0,0,0,.45);
   display:flex;
   align-items:center;
   justify-content:center;
   z-index:200;
 }
+
 .gift-box{
-  background:white;
+  background:#fff;
   padding:20px;
-  border-radius:16px;
+  border-radius:18px;
   width:85%;
 }
-.gift-box h3{margin-top:0}
-.gift-box button{
-  margin-top:10px;
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:12px;
-  background:var(--accent);
-  color:white;
+
+.gift-box h3{
+  margin:0 0 8px;
 }
 
-/* ================= BOTTOM NAV ================= */
+.gift-box p{
+  margin:0 0 14px;
+  color:var(--muted);
+}
+
+/* BOTTOM NAV */
 .bottom-nav{
   position:fixed;
-  bottom:0;left:0;right:0;
-  background:white;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
   border-top:1px solid var(--border);
   display:flex;
   justify-content:space-around;
-  padding:10px 0 12px;
+  padding:10px 0;
 }
+
 .bottom-nav div{
-  text-align:center;
   font-size:12px;
   color:var(--muted);
   cursor:pointer;
 }
-.bottom-nav .active{color:var(--accent)}
-.bottom-nav .icon{font-size:20px;display:block}
+
+.bottom-nav .active{
+  color:var(--accent);
+}
+.page{
+  display:none;
+  padding:16px;
+}
+
+.page.active{
+  display:block;
+  }
+  
+  .hidden{
+  display:none;
+}
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.modal-box{
+  background:#fff;
+  padding:16px;
+  width:90%;
+  max-width:400px;
+  border-radius:12px;
+}
+/* spacing inside gift modal */
+.modal-box h3{
+  margin-bottom:16px;
+  text-align:center;
+}
+
+.modal-box input,
+.modal-box textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:12px;   /* ← IYI NIYO ITANDUKANIJE */
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.modal-actions{
+  display:flex;
+  flex-direction:column;
+  gap:12px;             /* ← spacing ya buttons */
+}
+
+.modal-actions .btn{
+  padding:12px;
+  border-radius:10px;
+  font-size:15px;
+}
+.hidden{display:none;}
 </style>
 </head>
 
 <body>
+    
+    <!-- PAGES -->
+<main id="pages">
 
-<!-- WATERMARK FOR UNPAID DESIGNS -->
- <div class="watermark" id="watermark">LAMEARN</div>
+  <section id="home" class="page active">
+    <!-- Home content (ibyo usanzwe ufite: search + posts) -->
+  </section>
 
-<!-- SIDE MENU -->
-<div class="side-menu" id="menu">
-  <h4>Main</h4>
-  <div class="item" onclick="show('home')">Home</div>
-  <div class="item" onclick="show('products')">Products</div>
-  <div class="item" onclick="show('books')">Books</div>
-  <div class="item" onclick="show('learning')">Learning</div>
-  <div class="item" onclick="show('jobs')">Jobs</div>
+  <section id="earn" class="page hidden">
+    <h2>Earn Money</h2>
+    <p>Tasks, jobs, and ways to earn.</p>
+  </section>
 
-  <h4>Social</h4>
-  <div class="item" onclick="show('inbox')">Inbox</div>
+  <section id="jobs" class="page hidden">
+    <h2>Jobs</h2>
+    <p>Available jobs will appear here.</p>
+  </section>
 
-  <h4>Account</h4>
-  <div class="item">Profile</div>
-  <div class="item">Wallet</div>
-  <div class="item">Settings</div>
+  <section id="tasks" class="page hidden">
+    <h2>Tasks</h2>
+    <p>Complete tasks and earn rewards.</p>
+  </section>
+
+  <section id="products" class="page hidden">
+    <h2>Products</h2>
+    <p>Digital products marketplace.</p>
+  </section>
+
+  <section id="courses" class="page hidden">
+    <h2>Courses</h2>
+    <p>Learning & education.</p>
+  </section>
+
+  <section id="posts" class="page hidden">
+    <h2>Posts</h2>
+    <p>User posts & gifts.</p>
+  </section>
+
+  <section id="wallet" class="page hidden">
+    <h2>My Wallet</h2>
+    <p>Balance & earnings.</p>
+  </section>
+
+  <section id="withdraw" class="page hidden">
+    <h2>Withdraw</h2>
+  </section>
+
+  <section id="deposit" class="page hidden">
+    <h2>Deposit</h2>
+  </section>
+
+  <section id="transactions" class="page hidden">
+    <h2>Transactions</h2>
+  </section>
+
+  <section id="inbox" class="page hidden">
+    <h2>Inbox</h2>
+  </section>
+
+  <section id="gifts" class="page hidden">
+    <h2>Gifts</h2>
+  </section>
+
+  <section id="referrals" class="page hidden">
+    <h2>Referrals</h2>
+  </section>
+
+  <section id="followers" class="page hidden">
+    <h2>Followers</h2>
+  </section>
+
+  <section id="profile" class="page hidden">
+    <h2>Profile</h2>
+  </section>
+
+  <section id="settings" class="page hidden">
+    <h2>Settings</h2>
+  </section>
+
+  <section id="support" class="page hidden">
+    <h2>Support</h2>
+  </section>
+
+
+    
+    
+    <!-- TOP BAR -->
+<div class="top-bar">
+  <span class="menu-btn" onclick="toggleMenu()">☰</span>
+ <h2 class="brand-logo">LamEarn</h2>
 </div>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
- <div class="logo">LamEarn</div>
-  <div>⋮</div>
+  
+<input class="search" placeholder="🔍Search products, jobs, learning, earn...">
+
+<!-- POSTS (GIFTS ZEMEREWE GUSA HANO) -->
+<div class="grid">
+    
+<div class="card post-card">
+  <div class="thumb"></div>
+
+  <h3>Premium Book</h3>
+  <p>$5 · Popular</p>
+
+  <button class="btn" onclick="openGift(this)">
+    🎁 Send Gift
+  </button>
 </div>
 
-<input class="search" placeholder="Search products, jobs, learning, earn...">
-
-<!-- CONTENT -->
-<div id="content">
-
-<!-- HOME -->
-<div class="grid" id="home">
-  <div class="card">
-    <div class="thumb"></div>
-    <h3>Premium Book</h3>
-    <p>$5 · Popular</p>
-    <button class="btn" onclick="openGift()">Send Gift</button>
-  </div>
-  <div class="card">
+  <div class="card post-card">
     <div class="thumb"></div>
     <h3>Learning Course</h3>
     <p>$10 · New</p>
-    <button class="btn">Open</button>
+    <button class="btn" onclick="openGift(this)">🎁 Send Gift</button>
+  
+  </div>
+  <!-- GIFT MODAL -->
+<div id="giftModal" class="modal hidden">
+  <div class="modal-box">
+    <h3>🎁 Send Gift</h3>
+
+    <input type="text" placeholder="User name">
+    <textarea placeholder="Message (optional)"></textarea>
+
+    <div class="modal-actions">
+      <button class="btn" onclick="sendGift()">Send</button>
+      <button class="btn cancel" onclick="closeGift()">Cancel</button>
+    </div>
   </div>
 </div>
 
-<div class="empty hidden" id="products">No products available now</div>
-<div class="empty hidden" id="books">No books available now</div>
-<div class="empty hidden" id="learning">No learning available now</div>
-<div class="empty hidden" id="jobs">No jobs available now</div>
-<div class="empty hidden" id="inbox">No messages yet</div>
-
 </div>
 
-<!-- UPLOAD -->
-<div class="upload-btn">＋</div>
+</section>
 
-<!-- GIFT MODAL -->
-<div class="gift-modal hidden" id="giftModal">
-  <div class="gift-box">
-    <h3>Send Gift</h3>
-    <p>Select amount to gift this content.</p>
-    <button onclick="sendGift()">Confirm Gift</button>
-    <button onclick="closeGift()" style="background:#e5e7eb;color:#111">Cancel</button>
-  </div>
-</div>
-
-<!-- BOTTOM NAV -->
 <div class="bottom-nav">
-  <div class="active" onclick="show('home')"><span class="icon">⌂</span>Home</div>
-  <div onclick="show('products')"><span class="icon">🛒</span>Products</div>
-  <div onclick="show('inbox')"><span class="icon">✉️</span>Inbox</div>
-  <div><span class="icon">💼</span>Wallet</div>
-  <div><span class="icon">👤</span>Profile</div>
+  <div onclick="show('home')" class="active">
+    <span class="icon">⌂</span>Home
+  </div>
+  <div onclick="show('products')">
+    <span class="icon">🛒</span>Products
+  </div>
+  <div onclick="show('inbox')">
+    <span class="icon">✉️</span>Inbox
+  </div>
+  <div onclick="show('wallet')">
+    <span class="icon">🏆</span>Wallet
+  </div>
+  <div onclick="show('profile')">
+    <span class="icon">👤</span>Profile
+  </div>
 </div>
-
 <script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
+    let currentPost = null;
+    /* OPEN GIFT – POST GUSA */
+function openGift(btn){
+  const post = btn.closest('.post-card');
+  if(!post){
+    alert("Gifts are for posts only");
+    return;
+  }
+  currentPost = post;
+  document.getElementById('giftModal').classList.remove('hidden');
 }
-function show(id){
-  document.querySelectorAll("#content > div").forEach(d=>d.classList.add("hidden"));
-  document.getElementById(id).classList.remove("hidden");
-  toggleMenu();
-}
-function openGift(){
-  document.getElementById("giftModal").classList.remove("hidden");
-}
+
 function closeGift(){
-  document.getElementById("giftModal").classList.add("hidden");
+  document.getElementById('giftModal').classList.add('hidden');
+  currentPost = null;
 }
+
 function sendGift(){
+  if(!currentPost) return;
   alert("Gift sent successfully");
   closeGift();
 }
-/* unlock design after payment */
-// document.getElementById("watermark").classList.add("hidden");
 </script>
 
+
+
+<!-- GIFT MODAL HTML -->
+<div id="giftModal" class="hidden">
+  <div class="modal-box">
+    <h3>Send Gift</h3>
+    <button onclick="sendGift()">Confirm</button>
+    <button onclick="closeGift()">Cancel</button>
+  </div>
+</div>
+
+
+}
+</script>
+<div id="sideMenu" class="side-menu hidden">
+
+
+
+    <h3 class="menu-title">LamEarn</h3>
+  <!-- MAIN -->
+  <div class="upload-box">
+  <h3>Add New Product</h3>
+
+  <label class="upload-btn">
+    ⬆️ Upload
+    <input type="file" hidden>
+  </label>
+</div>
+  <a onclick="show('home')">⌂ Home</a>
+  <a onclick="show('earn')">💰 Earn Money</a>
+  <a onclick="show('jobs')">🧑‍💻 Jobs</a>
+  <a onclick="show('tasks')">✅ Tasks</a>
+  <a onclick="show('products')">🛒 Products</a>
+  <a onclick="show('courses')">🎓 Courses</a>
+  <a onclick="show('posts')">📝 Posts</a>
+<div class="upload-box">
+  <h3>Add New Product</h3>
+
+ 
+  <!-- WALLET -->
+  <p class="menu-section">WALLET</p>
+  <a onclick="show('wallet')">💼 My Wallet</a>
+  <a onclick="show('withdraw')">💸 Withdraw</a>
+  <a onclick="show('deposit')">➕ Deposit</a>
+  <a onclick="show('transactions')">📊 Transactions</a>
+
+  <!-- SOCIAL -->
+  <p class="menu-section">SOCIAL</p>
+  <a onclick="show('inbox')">✉️ Inbox</a>
+  <a onclick="show('gifts')">🎁 Gifts</a>
+  <a onclick="show('referrals')">🤝 Referrals</a>
+  <a onclick="show('followers')">👥 Followers</a>
+  <a onclick="openInviteLink()">📨 Invite Friends</a>
+
+  <!-- ACCOUNT -->
+  <p class="menu-section">ACCOUNT</p>
+  <a onclick="show('profile')">👤 Profile</a>
+  <a onclick="show('settings')">⚙️ Settings</a>
+  <a onclick="show('support')">🆘 Support</a>
+  <a onclick="show('logout')">🚪 Logout</a>
+
+</div>
+<script>
+function toggleMenu(){
+  const menu = document.getElementById("sideMenu");
+  menu.classList.toggle("hidden");
+}
+</script>
+<script>
+function show(pageId){
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.remove('active');
+  });
+
+  const page = document.getElementById(pageId);
+  if(page) page.classList.add('active');
+
+  const menu = document.getElementById('sideMenu');
+  if(menu) menu.classList.add('hidden');
+}
+</script>
+
+<script>
+function openGift(btn){
+  document.getElementById("giftModal").classList.remove("hidden");
+}
+
+function closeGift(){
+  document.getElementById("giftModal").classList.add("hidden");
+}
+
+function sendGift(){
+  alert("Gift sent successfully 🎉");
+  closeGift();
+}
+</script>
+<script>
+function openInviteLink(){
+  window.open(
+    "https://lamearn.app/invite?ref=USER123",
+    "_blank"
+  );
+}
+</script>
 </body>
-</html>
+      </html>
