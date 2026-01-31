@@ -1,0 +1,4 @@
+hereUser-agent: *
+Allow: /
+
+Sitemap: https://lamearn.github.io/LamEarn/sitemap.xml
